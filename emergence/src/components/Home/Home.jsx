@@ -22,6 +22,7 @@ export default function Home (){
         </a>
         <nav>
             <Link to="/profil/:id">Profile</Link>
+          {/*ceci est test me permettant de savoir si je peux push.*/}
         </nav>
         <Outlet />
       </header>

@@ -3,14 +3,6 @@ import Form from './FCformDomPro'
 
 
 function Affichage() {
-  
-    
-  
-  
-
-
-
-
 return (
     <div>
         <Form />

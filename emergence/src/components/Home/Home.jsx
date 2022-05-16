@@ -9,7 +9,7 @@ export default function Home (){
       <header className="App-header">
         <img src={frog} className="App-logo" alt="logo" />
         <p>
-          Rinzler
+          Rinzler ouai la streeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeet
         </p>
         <p>Connecté</p>
         <a

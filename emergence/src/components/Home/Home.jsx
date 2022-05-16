@@ -10,6 +10,7 @@ export default function Home (){
         <img src={frog} className="App-logo" alt="logo" />
         <p>
           Rinzler ouai la streeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeet
+          en plus j'aime bien le miel
         </p>
         <p>Connecté</p>
         <a

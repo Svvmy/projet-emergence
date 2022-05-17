@@ -3,16 +3,19 @@ import './form.css'
 //import  { Checkbox }  from "./Checkbox"
 //import  { Input }  from "./Input"
 import FormInput from './FormInput';
+import ChoixRadio from './ChoixRadio'
 
  function Form(){
 
     //const [value,setValue] = useState('');
     //const [val,setValuePro] = useState('');
     //const [check,setCheck] = useState(true);
-    const [values, setValues] = useState({
+    
+    const [valRadio, setValRadio] = useState("")
+    
+      const [values, setValues] = useState({
       domainePro: "",
       activitePro: "",
-      
     });
 
     const inputs = [
@@ -45,17 +48,25 @@ import FormInput from './FormInput';
       setValues({...values, [e.target.name]: e.target.value });
     };
   
+    const onChangeRad = (e) => {
+      setValRadio(e.target.value);
+    };
+
   console.log(values)
+  console.log(valRadio)
   return (
     <div className='form'>
-    <form id="formulaireDomPro" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
+        <div className='etudiant'>
         <h2>Etes vous étudiant ?</h2>
-        <div>
             {/*<input type="checkbox" onClick={toggle} name="check"/>*/}
-          <input type="radio" id="oui" name="check" value="oui"/>
-            <label>Oui</label>
-          <input type="radio" id="non" name="check" value="non"/>
-            <label>Non</label>
+          <div id='radio'>
+            <input type="radio" id="oui" name="check" value="oui" onChange={onChangeRad} />
+              <label className='labelradio'>Oui</label>
+            <input type="radio" id="non" name="check" value="non"onChange={onChangeRad}/>
+              <label className='labelradio'>Non</label>
+          </div>
+        
         </div>
         <div>
           {inputs.map((input)=> (
@@ -68,9 +79,12 @@ import FormInput from './FormInput';
           ))}
         </div>  
         <div>
-          <button>Suivant</button>
+          <ChoixRadio value={valRadio}>
+            <button>Suivant</button>
+          </ChoixRadio>
+
         </div>
-    </form>
+      </form>
     </div>
   )
 }

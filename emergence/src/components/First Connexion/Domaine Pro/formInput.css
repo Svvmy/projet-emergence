@@ -1,7 +1,7 @@
 .formInput{
     display: flex;
     flex-direction: column;
-    width: 280px;
+    width: 500px;
 }
 
 input{
@@ -9,9 +9,11 @@ input{
     margin: 10px 0px;
     border-radius: 5px;
     border: 1px solid;
+    border-radius: 50px;
 }
 
 label{
+    font-family: Montserrat;
     font-size: 10 px;
     color: #000000;
 }

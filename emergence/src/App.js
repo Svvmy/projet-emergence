@@ -6,8 +6,10 @@ import Navbar from './components/Navbar/Navbar'
 import Post from './components/Profile/Posts/Posts'
 import Experience from './components/Profile/Experiences/Experiences'
 import Projet from './components/Profile/Projets/Projets'
-import FCdomainePro from './components/First Connexion/Domaine Pro/Affichage'
+import FCformdomainePro from './components/First Connexion/Domaine Pro/Affichage'
 import Messagerie from './components/Home/Messagerie/Messagerie'
+import FCformExperience from './components/First Connexion/FormExperience/FormExperience'
+import FCformFormation from './components/First Connexion/FormFormation/FormFormation'
 
 
 export default function App() {
@@ -22,7 +24,9 @@ export default function App() {
           <Route path ="/profil/:id/experience" element ={<Experience />} />
           <Route path ="/profil/:id/projet" element ={<Projet />} />
         </Route>
-        <Route path ="/FC/domaine-pro" element = {<FCdomainePro />}/>     
+        <Route path ="/FC/domaine-pro" element = {<FCformdomainePro />}/>     
+        <Route path ="/FC/ajout-formation" element = {<FCformFormation />}/>     
+        <Route path ="/FC/ajout-experience" element = {<FCformExperience />}/>     
       </Routes>
     </div>
   );

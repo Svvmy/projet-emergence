@@ -24,14 +24,14 @@ import ChoixRadio from './ChoixRadio'
         name: "domainePro",
         type: "text",
         placeholder: "Domaine Informatique",
-        label: "Indiquer votre domaine d'activité",
+        label: "Indiquer votre domaine d'activité(actuel",
       },
       {
         id: 2,
         name: "activitePro",
         type: "text",
         placeholder: "Consultant informatique",
-        label: "Indiquer votre activité professionnelle",
+        label: "Indiquer votre activité professionnelle(actuel)",
       }]
 
     /*const toggle = () => {setCheck((o) => !o)
@@ -47,9 +47,9 @@ import ChoixRadio from './ChoixRadio'
     const onChange = (e) => {
       setValues({...values, [e.target.name]: e.target.value });
     };
-  
     const onChangeRad = (e) => {
       setValRadio(e.target.value);
+    
     };
 
   console.log(values)

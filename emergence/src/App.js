@@ -7,7 +7,7 @@ import Post from './components/Profile/Posts/Posts'
 import Experience from './components/Profile/Experiences/Experiences'
 import Projet from './components/Profile/Projets/Projets'
 import FCformdomainePro from './components/First Connexion/Domaine Pro/Affichage'
-import Messagerie from './components/Home/Messagerie/Messagerie'
+import Messagerie from './components/Messagerie/Messagerie'
 import FCformExperience from './components/First Connexion/FormExperience/FormExperience'
 import FCformFormation from './components/First Connexion/FormFormation/FormFormation'
 

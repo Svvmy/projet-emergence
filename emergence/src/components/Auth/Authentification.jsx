@@ -12,15 +12,15 @@ export default function Authentification() {
         </div>
 
         <div>
-            <h1>Bienvenue !</h1>
-            <h2>Faites émerger vos projets avec Emergence Design</h2>
+            <h1 className='text'>Bienvenue !</h1>
+            <h2 className='text'>Faites émerger vos projets avec Emergence Design</h2>
         </div>
 
         <div className='divBut'> 
               <button> S'inscrire avec Google </button>
               <button> S'inscrire avec Apple </button>
               <button> S'inscrire avec un e-mail </button>
-              <label> Vous avez déjà un compte ?</label>
+              <label className='text'> Vous avez déjà un compte ?</label>
               <button> Se connecter </button>
         </div>
 

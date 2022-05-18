@@ -17,11 +17,11 @@ export default function Authentification() {
         </div>
 
         <div className='divBut'> 
-            <button> S'inscrire avec Google </button>
-            <button> S'inscrire avec Apple </button>
-            <button> S'inscrire avec un e-mail </button>
-            <label> Vous avez déjà un compte ?</label>
-            <button> Se connecter </button>
+              <button> S'inscrire avec Google </button>
+              <button> S'inscrire avec Apple </button>
+              <button> S'inscrire avec un e-mail </button>
+              <label> Vous avez déjà un compte ?</label>
+              <button> Se connecter </button>
         </div>
 
     </div>

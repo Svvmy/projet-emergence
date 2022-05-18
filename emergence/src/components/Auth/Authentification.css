@@ -11,6 +11,10 @@
     background-color: aqua;
 }
 
+body{
+    background-image: url(./home1.png);
+}
+
 button{
    
     width: 100%;

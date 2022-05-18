@@ -3,7 +3,7 @@ import "./Authentification.css"
 
 export default function Authentification() {
   return (
-    <div>
+    <div className='divAuth'>
 
         <div>
             <header>

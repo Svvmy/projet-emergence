@@ -11,6 +11,10 @@
     background-color: aqua;
 }
 
+body{
+    background: url('./home1.png') ;
+}
+
 button{
    
     width: 100%;
@@ -34,3 +38,4 @@ label{
     width: 240px;
     background-color: blueviolet;
 }
+

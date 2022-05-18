@@ -1,6 +1,6 @@
 import './App.css'
 import {Routes, Route} from "react-router-dom"
-import Accueil from './components/Home/Accueil'
+//import Accueil from './components/Home/Accueil'
 import Profile from './components/Profile/Profile'
 import Navbar from './components/Navbar/Navbar'
 import Post from './components/Profile/Posts/Posts'
@@ -10,6 +10,7 @@ import FCformdomainePro from './components/First Connexion/Domaine Pro/Affichage
 import Messagerie from './components/Home/Messagerie/Messagerie'
 import FCformExperience from './components/First Connexion/FormExperience/FormExperience'
 import FCformFormation from './components/First Connexion/FormFormation/FormFormation'
+import Authentification from './components/Auth/Authentification'
 
 
 export default function App() {
@@ -17,7 +18,7 @@ export default function App() {
     <div className='App'>
       <Navbar />
       <Routes>
-        <Route path ="/" element ={<Accueil />} />
+        <Route path ="/" element ={<Authentification />} />
         <Route path ="/messagerie" element ={<Messagerie />} />
         <Route path ="/profil/:id" element ={<Profile />}>
           <Route path ="/profil/:id/post" element ={<Post />} />

@@ -1,22 +1,39 @@
 img{
     width: 30px;
     height: 30px;
-    vertical-align: middle;
+   
 }
 
-.test{
-    display: inline-block; 
+.googleTest{
+   width:30px;
+   height: 30px;
+}
 
+.divbtn{
+    align-items: center;
+    width: 100px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.text1div{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 70%;
+    background-color: aqua;
+}
+
+.imgdiv{
+    display: flex;
+    align-items: center;
+    height: 70%;
+    /*background-color: blueviolet;*/
 }
 
 
-.logo{
-   display: inline-block;
-   width: 500px;
-   height: 150px;
-
-
-}
 
 
 .div{
@@ -49,9 +66,13 @@ body{
 
 button{
    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width:60%;
     height: 60px;
-    /*padding: 10px;*/
+    padding: 10px;
     border: none;
     background-color: white;
     color: black;
@@ -61,7 +82,8 @@ button{
     cursor: pointer;
     margin-top: 25px;
     margin-bottom: 10px;
-    vertical-align: middle;
+    align-items: center;
+   
     
     
 }

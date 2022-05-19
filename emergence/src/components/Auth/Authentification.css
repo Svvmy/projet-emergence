@@ -78,6 +78,11 @@ h2{
     font-size: 20px;
 }
 
+button:hover {
+    background-color: #5271FF;
+    color: white;
+}
+
 /*
 img{
     padding: px;

@@ -1,6 +1,8 @@
 import React from 'react'
 import "./Authentification.css"
-import frog from './froge.png'
+import google from './logoGoogle.png'
+import apple from './logoApple.png'
+import mail from './logoMail.png'
 
 
 export default function Authentification() {
@@ -22,9 +24,9 @@ export default function Authentification() {
           </div>
           
           <div className='divBtnList'>
-              <button><img src={frog} alt="img"/> S'inscrire avec Google </button>
-              <button> S'inscrire avec Apple </button>
-              <button> S'inscrire avec un e-mail </button>
+              <button><img src={google} alt="img"/> S'inscrire avec Google </button>
+              <button><img src={apple} alt="img"/> S'inscrire avec Apple </button>
+              <button><img src={mail} alt="img"/> S'inscrire avec un e-mail </button>
               <label className='text'> Vous avez déjà un compte ?</label>
               <button> Se connecter </button>
           </div>

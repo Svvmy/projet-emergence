@@ -42,7 +42,7 @@ export default function Authentification() {
               <button><img src={apple} alt="img"/> S'inscrire avec Apple </button>
               <button><img src={mail} alt="img"/> S'inscrire avec un e-mail </button>
               <label className='text'> Vous avez déjà un compte ?</label>
-              <button> Se connecter </button>
+              <button className='connect'> Se connecter </button>
           </div>
         
         </div>

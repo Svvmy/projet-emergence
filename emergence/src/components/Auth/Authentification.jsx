@@ -8,20 +8,11 @@ import mail from './logoMail.png'
 export default function Authentification() {
   return (
     <div className='divAuth'>
-        <div className="flex">
-          <img className="imgClass" src={google} alt="img"/>
-          <img className="imgClass" src={google} alt="img"/>
-          <img className="imgClass" src={google} alt="img"/>
-        </div>
-
-        <div className='div'> 
-          
+        <div className='div'>     
           <div className='divTitre'>
               <h1 className='text'>Bienvenue !</h1>
               <h2 className='text'>Faites émerger vos projets avec Emergence Design</h2>
           </div>
-              
-          
           <div className='divBtnList'>
               {/*<button> 
                 <div className='divbtn'>
@@ -34,17 +25,19 @@ export default function Authentification() {
                 </div>
               </button>*/}
               <button>
-                  <img className="imgClass" src={google} alt="img"/>S'inscrire avec Google 
+                    <img className="imgClass" src={google} alt="img"/>
+                  S'inscrire avec Google 
               </button>
               
               <button>
-                <img className="imgClass" src={apple} alt="img"/> S'inscrire avec Apple 
+                <img className="imgClass" src={apple} alt="img"/> 
+                S'inscrire avec Apple 
               </button>
               
               <button>
-                <img className="imgClass" src={mail} alt="img"/> S'inscrire avec un e-mail 
+                <img className="imgClass" src={mail} alt="img"/> 
+                S'inscrire avec un e-mail 
               </button>
-              
               
               
               <label className='text'> Vous avez déjà un compte ?</label>

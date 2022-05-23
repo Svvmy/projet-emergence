@@ -1,11 +1,23 @@
-import React from 'react'
+import React, {useContext, useState} from 'react'
 import "./Authentification.css"
 import google from './logoGoogle.png'
 import apple from './apple.png'
 import mail from './logoMail.png'
+//import Nav from ''
 
 
 export default function Authentification() {
+  
+  const [connect, setConnect] = useState(false)
+  
+ 
+
+
+  const toggleConnect = () =>{
+      setConnect(!connect)
+  }
+  console.log(connect)
+  
   return (
     <div className='divAuth'>
         <div className='div'>     
@@ -39,9 +51,10 @@ export default function Authentification() {
                 S'inscrire avec un e-mail 
               </button>
               
-              
               <label className='text'> Vous avez déjà un compte ?</label>
-              <button className='connect'> Se connecter </button>
+              {/*<Nav>*/}
+              <button className='connect' onClick={toggleConnect}> Se connecter </button>
+              {/*</Nav>*/}
           </div>
         
         </div>

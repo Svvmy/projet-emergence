@@ -3,7 +3,7 @@ img{
     height: 30px;
    
 }
-.flex{
+/*.flex{
     display: flex;
     
     flex-direction: column;
@@ -12,7 +12,7 @@ img{
     justify-content: center;
     background-color: aqua;
     gap: 10px;
-}
+}*/
 
 .imgGooglediv{
     
@@ -79,9 +79,10 @@ img{
     align-items: center;
 }
 
-body{
+.divAuth{
     background-image: url(./home1.png);
     background-size: cover;
+    height: 1080px;
 }
 
 button{

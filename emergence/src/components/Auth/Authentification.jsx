@@ -51,7 +51,7 @@ export default function Authentification() {
                 S'inscrire avec un e-mail 
               </button>
               
-              <label className='text'> Vous avez déjà un compte ?</label>
+              <label className='text'id='label'> Vous avez déjà un compte ?</label>
               {/*<Nav>*/}
               <button className='connect' onClick={toggleConnect}> Se connecter </button>
               {/*</Nav>*/}

@@ -2,13 +2,16 @@ import React from 'react'
 import './formInput.css'
 
 const FormInput = (props) => {
-  const { label, onChange, id, ...inputProps} = props
-    return (
+  const {visible, label, onChange, id, ...inputProps} = props
+    let bool = false;
+	    if (visible) {
+		    bool = true;
+	    }
+  
+  return (
     <div className='formInput'>
-        <label>{label}</label>
-        <input {...inputProps} onChange={onChange} />
-
-
+        <label className='lblForm'>{label}</label>
+        <input {...inputProps} onChange={onChange} disabled={bool} />
     </div>
   )
 }

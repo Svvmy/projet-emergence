@@ -1,9 +1,11 @@
 import React from 'react';
 
 export function Checkbox({ visible, children }) {
-	let className = 'unCheck';
-	if (!visible) {
-		className = 'check';
+	let className = "nonCoche";
+	if (visible) {
+		className = "coche";
 	}
-	return <div className={className}>{children}</div>;
+		return (
+		<div className={className}>{children}</div>
+	)
 }

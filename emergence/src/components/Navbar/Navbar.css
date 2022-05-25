@@ -3,11 +3,11 @@
     background-color: aliceblue;
 }*/
 .navbar {
-    
     background-color: blue;
 }
 
 .navConnect{
+    text-align: center;
     position: fixed;
     left: 0px;
 	top: 0px;

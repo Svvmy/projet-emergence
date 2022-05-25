@@ -24,7 +24,7 @@ import ChoixRadio from './ChoixRadio'
         name: "domainePro",
         type: "text",
         placeholder: "Domaine Informatique",
-        label: "Indiquer votre domaine d'activité(actuel",
+        label: "Indiquer votre domaine d'activité(actuel)",
       },
       {
         id: 2,
@@ -55,10 +55,10 @@ import ChoixRadio from './ChoixRadio'
   console.log(values)
   console.log(valRadio)
   return (
-    <div className='form'>
-      <form onSubmit={handleSubmit}>
+    <div className='divPageFormDomPro'>
+      <form className='form' onSubmit={handleSubmit}>
         <div className='etudiant'>
-        <h2>Etes vous étudiant ?</h2>
+        <h2 id='h2'>Êtes vous étudiant ?</h2>
             {/*<input type="checkbox" onClick={toggle} name="check"/>*/}
           <div id='radio'>
             <input type="radio" id="oui" name="check" value="oui" onChange={onChangeRad} />
@@ -78,9 +78,9 @@ import ChoixRadio from './ChoixRadio'
             />
           ))}
         </div>  
-        <div>
+        <div className='divBtnSuivant'>
           <ChoixRadio value={valRadio}>
-            <button>Suivant</button>
+            <button id='btnSuivant'>Suivant</button>
           </ChoixRadio>
 
         </div>

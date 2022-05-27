@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import { Checkbox } from './Checkbox';
-import { Input } from './Input';
 import FormInput from '../Domaine Pro/FormInput';
 
 import './formexp.css';
@@ -8,7 +7,6 @@ import imgRetour from './fleche retour.png';
 
 export default function FormExperience() {
 	const [ RetourPage, setRetourPage ] = useState('');
-  
   // //const [ ShowDateFin, setShowDateFin ] = useState(true);
 	// const [ NomEntreprise, setNomEntreprise ] = useState('');
 	// const [ Poste, setPoste ] = useState('');
@@ -22,7 +20,6 @@ export default function FormExperience() {
 	// const [ value, setValue ] = useState('');
 	// const [ val, setValuePro ] = useState('');
 	const [ check, setCheck ] = useState(false);
-
   const [values, setValues] = useState({
     typeEmploi:"",
     intitulePoste:"",
@@ -36,6 +33,8 @@ export default function FormExperience() {
 
   });
 
+  // reset de la valeur reussi visuelement mais pas dans le tableau d'inputs 
+
   const inputs = [
     {
       id: 1,
@@ -48,21 +47,21 @@ export default function FormExperience() {
       id: 2,
       name: "intitulePoste",
       type: "text",
-      placeholder: "Consultant informatique",
+      placeholder: "Chef de projet informatique",
       label: "Intitulé de poste",
     },
     {
       id: 3,
       name: "nomEntreprise",
       type: "text",
-      placeholder: "Consultant informatique",
+      placeholder: "Nom de l'entreprise",
       label: "Nom de l'entreprise",
     },
     {
       id: 4,
       name: "dateDebut",
       type: "text",
-      placeholder: "Consultant informatique",
+      placeholder: "01/01/1950",
       label: "Date de début",
     },
     {
@@ -76,14 +75,14 @@ export default function FormExperience() {
       id: 6,
       name: "dateFin",
       type: "text",
-      placeholder: "Consultant informatique",
+      placeholder: "01/01/1950",
       label: "Date de fin",
     },
     {
       id: 7,
       name: "lieu",
       type: "text",
-      placeholder: "Consultant informatique",
+      placeholder: "Paris, France",
       label: "Lieu",
     },
     {
@@ -97,7 +96,7 @@ export default function FormExperience() {
       id: 9,
       name: "descriptif",
       type: "textarea",
-      placeholder: "",
+      placeholder: "Description de votre expérience",
       label: "Descriptif",
     },
   ]
@@ -125,7 +124,6 @@ export default function FormExperience() {
           visible={check}
           />
         </Checkbox>
-        
       )
     } else {
       return(
@@ -146,7 +144,11 @@ export default function FormExperience() {
     e.preventDefault();
     //console.log(value)
   }
-  
+  const onChange2 = (e) => {
+    setValues();
+    toggle()
+  };
+
   const onChange = (e) => {
     setValues({...values, [e.target.name]: e.target.value });
   };

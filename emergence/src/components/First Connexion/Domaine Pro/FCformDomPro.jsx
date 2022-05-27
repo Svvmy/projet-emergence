@@ -24,7 +24,10 @@ import ChoixRadio from './ChoixRadio'
         name: "domainePro",
         type: "text",
         placeholder: "Domaine Informatique",
+        errorMessage : "Veuillez renseigner ce champ",
         label: "Indiquer votre domaine d'activité(actuel)",
+        pattern: "^[A-Za-z]{1,60}$",
+        required: true,
       },
       {
         id: 2,

@@ -64,7 +64,7 @@ import ChoixRadio from './ChoixRadio'
         <h2 id='h2'>Êtes vous étudiant ?</h2>
             {/*<input type="checkbox" onClick={toggle} name="check"/>*/}
           <div id='radio'>
-            <input type="radio" id="oui" name="check" value="oui" onChange={onChangeRad} />
+            <input type="radio" id="oui" name="check" value="oui" onChange={onChangeRad}/>
               <label className='labelradio'>Oui</label>
             <input type="radio" id="non" name="check" value="non"onChange={onChangeRad}/>
               <label className='labelradio'>Non</label>

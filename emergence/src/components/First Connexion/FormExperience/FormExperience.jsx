@@ -60,7 +60,7 @@ export default function FormExperience() {
     {
       id: 4,
       name: "dateDebut",
-      type: "text",
+      type: "month",
       placeholder: "01/01/1950",
       label: "Date de début",
     },

@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react'
+import React, {useState} from 'react'
 import "./Authentification.css"
 import google from './logoGoogle.png'
 import apple from './apple.png'

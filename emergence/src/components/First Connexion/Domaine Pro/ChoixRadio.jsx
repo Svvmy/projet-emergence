@@ -6,11 +6,12 @@ import './form.css'
 function Radio({ value }){
   if(value==="oui"){
     return (
-        <Link to="/FC/ajout-formation"><button value={value}>Suivant</button></Link>
+        <Link className='aBtnSuivant' to="/FC/ajout-formation"><button id='btnSuivant' value={value}>Suivant</button></Link>
     )
     }else{
-        return(
-            <Link to="/FC/ajout-experience"><button value={value}>Suivant</button></Link>
+        
+    return(
+        <Link className='aBtnSuivant' to="/FC/ajout-experience"><button id='btnSuivant' value={value}>Suivant</button></Link>
     )}
 
 }

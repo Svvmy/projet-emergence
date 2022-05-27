@@ -1,36 +1,74 @@
-.unCheck{
+/* .unCheck{
 color: grey;
 opacity: 50%;
-}
+} */
 
 .labelradio{
-    margin: 20px;
+    margin: 0 15px;
 }
 
-.form{
+#radio input{
+    margin: 0;
+}
+
+.divPageFormDomPro{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
+
 }
 
-form{
-    background-color: rgb(255, 255, 255);
-    padding: 0px 30px;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+.form{
+    margin:auto;
+    width: 30%;
 }
 
-h2{
+
+.etudiant{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+#h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-family: Montserrat;
     font-weight: bold;
     color: #000000;
+    /* text-align:center; */
 }
 
-button{
-    width: 50%;
-    height: 50px;
-    padding: 10px;
+#radio{
+    font-family: Montserrat;
+    font-weight: normal;
+}
+
+.divBtnSuivant{
+    display: flex;
+    margin: auto;
+    width: 40%;
+    height: 150px;
+   
+}
+
+.aBtnSuivant{
+    margin: auto;
+    background-color: aqua;
+    width: 100%;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+
+#btnSuivant{
+    
+    width: 100%;
+    margin: auto;
+    /* width: 50%;
+    height: 50px; */
+    /* padding: 10px; */
     border: none;
     background-color: #2A63FF;
     color: rgb(255, 255, 255);

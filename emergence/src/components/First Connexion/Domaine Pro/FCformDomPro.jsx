@@ -24,7 +24,10 @@ import ChoixRadio from './ChoixRadio'
         name: "domainePro",
         type: "text",
         placeholder: "Domaine Informatique",
-        label: "Indiquer votre domaine d'activité(actuel",
+        errorMessage : "Veuillez renseigner ce champ",
+        label: "Indiquer votre domaine d'activité(actuel)",
+        pattern: "^[A-Za-z]{1,60}$",
+        required: true,
       },
       {
         id: 2,
@@ -58,7 +61,7 @@ import ChoixRadio from './ChoixRadio'
     <div className='form'>
       <form onSubmit={handleSubmit}>
         <div className='etudiant'>
-        <h2>Etes vous étudiant ?</h2>
+        <h2>Êtes vous étudiant ?</h2>
             {/*<input type="checkbox" onClick={toggle} name="check"/>*/}
           <div id='radio'>
             <input type="radio" id="oui" name="check" value="oui" onChange={onChangeRad} />

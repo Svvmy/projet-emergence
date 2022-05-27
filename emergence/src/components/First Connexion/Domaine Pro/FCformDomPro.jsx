@@ -26,7 +26,7 @@ import ChoixRadio from './ChoixRadio'
         placeholder: "Domaine Informatique",
         errorMessage : "Veuillez renseigner ce champ",
         label: "Indiquer votre domaine d'activité(actuel)",
-        pattern: "^[A-Za-z]{1,60}$",
+        pattern: "^[A-Za-z]{1,16}$",
         required: true,
       },
       {
@@ -54,9 +54,11 @@ import ChoixRadio from './ChoixRadio'
       setValRadio(e.target.value);
     
     };
+  // const domainePro = values.domainePro
 
   console.log(values)
-  console.log(valRadio)
+  console.log(values.domainePro+" valeur domAct")
+  console.log(valRadio +" radio btn")
   return (
     <div className='divPageFormDomPro'>
       <form className='form' onSubmit={handleSubmit}>
@@ -64,7 +66,7 @@ import ChoixRadio from './ChoixRadio'
         <h2 id='h2'>Êtes vous étudiant ?</h2>
             {/*<input type="checkbox" onClick={toggle} name="check"/>*/}
           <div id='radio'>
-            <input type="radio" id="oui" name="check" value="oui" onChange={onChangeRad} />
+            <input type="radio" id="oui" name="check" value="oui" onChange={onChangeRad}/>
               <label className='labelradio'>Oui</label>
             <input type="radio" id="non" name="check" value="non"onChange={onChangeRad}/>
               <label className='labelradio'>Non</label>
@@ -82,7 +84,7 @@ import ChoixRadio from './ChoixRadio'
           ))}
         </div>  
         <div className='divBtnSuivant'>
-          <ChoixRadio value={valRadio}>
+          <ChoixRadio value={valRadio} DomAct={values.domainePro}>
             <button id='btnSuivant'>Suivant</button>
           </ChoixRadio>
 

@@ -14,6 +14,7 @@ import ChoixRadio from './ChoixRadio'
     const [valRadio, setValRadio] = useState("")
     
       const [values, setValues] = useState({
+      radioBtn:"",
       domainePro: "",
       activitePro: "",
     });
@@ -21,6 +22,26 @@ import ChoixRadio from './ChoixRadio'
     const inputs = [
       {
         id: 1,
+        name: "radioBtn",
+        type: "radio",
+        placeholder: "",
+        errorMessage : "Veuillez renseigner ce champ",
+        label: "Oui",
+        pattern: "^[A-Za-z]{1,16}$",
+        required: true,
+      },
+      {
+        id: 2,
+        name: "radioBtn",
+        type: "radio",
+        placeholder: "",
+        errorMessage : "Veuillez renseigner ce champ",
+        label: "Non",
+        pattern: "^[A-Za-z]{1,16}$",
+        required: true,
+      },
+      {
+        id: 3,
         name: "domainePro",
         type: "text",
         placeholder: "Domaine Informatique",
@@ -30,12 +51,45 @@ import ChoixRadio from './ChoixRadio'
         required: true,
       },
       {
-        id: 2,
+        id: 4,
         name: "activitePro",
         type: "text",
         placeholder: "Consultant informatique",
         label: "Indiquer votre activité professionnelle(actuel)",
       }]
+
+      function inputType(input){
+        if(input.id === 1){
+          return(
+              <FormInput
+              key = {input.id}
+              {...input}
+              value={"oui"}
+              // onClick={toggle}
+              onChange={onChangeRad}
+              />
+          )
+        }else if(input.id === 2){
+          return(
+              <FormInput
+              key = {input.id}
+              {...input}
+              value={"non"}
+              onChange={onChangeRad}
+              />
+          )
+        } else {
+          return(
+            <FormInput
+            key = {input.id}
+            {...input}
+            value={values[input.name]}
+            onChange={onChange}
+            />
+          )
+        }
+      
+      }
 
     /*const toggle = () => {setCheck((o) => !o)
     console.log(check)
@@ -64,23 +118,17 @@ import ChoixRadio from './ChoixRadio'
       <form className='form' onSubmit={handleSubmit}>
         <div className='etudiant'>
         <h2 id='h2'>Êtes vous étudiant ?</h2>
-            {/*<input type="checkbox" onClick={toggle} name="check"/>*/}
-          <div id='radio'>
+          {/* <div id='radio'>
             <input type="radio" id="oui" name="check" value="oui" onChange={onChangeRad}/>
               <label className='labelradio'>Oui</label>
             <input type="radio" id="non" name="check" value="non"onChange={onChangeRad}/>
               <label className='labelradio'>Non</label>
-          </div>
-        
+          </div> */}
         </div>
         <div>
+          
           {inputs.map((input)=> (
-            <FormInput
-              key = {input.id}
-              {...input}
-              value={values[input.name]}
-              onChange={onChange}
-            />
+           inputType(input)
           ))}
         </div>  
         <div className='divBtnSuivant'>

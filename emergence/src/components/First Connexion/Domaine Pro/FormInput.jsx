@@ -5,10 +5,10 @@ const FormInput = (props) => {
   const[focused, setFocused] = useState(false);
   const {visible ,label, errorMessage ,onChange, id, ...inputProps} = props;
   let bool = false;
-  let value
+  // let value
   if (visible) {
     bool = true;
-    value=""
+    // value=""
   }
   
   const handleFocus = (e) => {
@@ -18,7 +18,7 @@ const FormInput = (props) => {
     return (
     <div className='formInput'>
         <label className='lblForm'>{label}</label>
-        <input {...inputProps} onChange={onChange} onBlur={handleFocus} focused ={focused.toString()} disabled={bool} value={value} />
+        <input {...inputProps} onChange={onChange} onBlur={handleFocus} focused ={focused.toString()} disabled={bool} />
         <span>{errorMessage}</span>
     </div>
       )

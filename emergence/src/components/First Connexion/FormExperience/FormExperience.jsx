@@ -145,8 +145,9 @@ export default function FormExperience() {
     //console.log(value)
   }
   const onChange2 = (e) => {
-    setValues();
-    toggle()
+    values.dateFin = ""
+    // setValues();
+    // toggle()
   };
 
   const onChange = (e) => {
@@ -155,7 +156,8 @@ export default function FormExperience() {
 
 	const toggle = () => {
 		setCheck((o) => !o);
-		console.log(check);
+		values.dateFin=""
+    console.log(check);
 	};
 
 	// const handleSubmit = (e) => {
@@ -165,6 +167,7 @@ export default function FormExperience() {
 	// };
   
   console.log(values)
+  console.log(values.dateFin)
   return (
   <div className='divPageFormExp'>  
       <button className="button" id='btnRetour' type="submit" value={RetourPage} onClick="history.back()" onChange={(e) => setRetourPage(e.target.value)}>
@@ -187,19 +190,12 @@ export default function FormExperience() {
         <div className='inputs'>
           {inputs.map((input) => (
             inputType(input)
-
-
-
             //   <FormInput
             //   key = {input.id}
             //   {...input}
             //   value={values[input.name]}
             //   onChange={onChange}
             // />
-            
-            
-            
-            
           ))}
         </div>  
 

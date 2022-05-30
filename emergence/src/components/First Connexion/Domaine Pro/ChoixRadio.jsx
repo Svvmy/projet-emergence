@@ -19,10 +19,6 @@ function Radio({ value, DomAct}){
                 <Link className='aBtnSuivant' to="/FC/ajout-experience"><button id='btnSuivant' value={value}>Suivant</button></Link>
         )
         }else{
-            console.log("non frerot")
-            console.log(DomAct)
-            console.log(value)
-            
             return(
                 <button id='btnSuivant' value={value} onClick={verifChamps} >Suivant</button>
                 )
@@ -32,7 +28,6 @@ function Radio({ value, DomAct}){
 return(
     verifChamps()    
 )
-
 
 
 }

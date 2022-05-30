@@ -8,13 +8,13 @@ function Radio({ value, DomAct}){
     const verifChamps = () => {
         
         if(value==="oui"&& DomAct!==""){
-            console.log("Concert pnl ZAK") 
+            console.log("Étudiant") 
             return (
                 <Link className='aBtnSuivant' to="/FC/ajout-formation"><button id='btnSuivant' value={value}>Suivant</button></Link>
         )
     
         }else if(value==="non"&& DomAct!==""){   
-            console.log("PAs de concert pour ZAK")
+            console.log("Pas étudiant")
             return(
                 <Link className='aBtnSuivant' to="/FC/ajout-experience"><button id='btnSuivant' value={value}>Suivant</button></Link>
         )

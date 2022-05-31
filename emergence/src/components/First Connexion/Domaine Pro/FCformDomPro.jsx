@@ -27,7 +27,6 @@ import ChoixRadio from './ChoixRadio'
         placeholder: "",
         errorMessage : "Veuillez renseigner ce champ",
         label: "Oui",
-        pattern: "^[A-Za-z]{1,16}$",
         required: true,
       },
       {
@@ -37,7 +36,6 @@ import ChoixRadio from './ChoixRadio'
         placeholder: "",
         errorMessage : "Veuillez renseigner ce champ",
         label: "Non",
-        pattern: "^[A-Za-z]{1,16}$",
         required: true,
       },
       {

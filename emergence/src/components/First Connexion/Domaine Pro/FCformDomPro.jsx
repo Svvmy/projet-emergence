@@ -59,22 +59,29 @@ import ChoixRadio from './ChoixRadio'
       function inputType(input){
         if(input.id === 1){
           return(
+            // <div classname="radio">
               <FormInput
               key = {input.id}
               {...input}
               value={"oui"}
               // onClick={toggle}
               onChange={onChangeRad}
+              spe={"radio"}
               />
+            /* </div> */
           )
         }else if(input.id === 2){
           return(
-              <FormInput
-              key = {input.id}
-              {...input}
-              value={"non"}
-              onChange={onChangeRad}
-              />
+              // <div classname="radio">
+                <FormInput
+                key = {input.id}
+                {...input}
+                value={"non"}
+                onChange={onChangeRad}
+                spe={"radio"}
+                />
+              // </div>
+              
           )
         } else {
           return(
@@ -124,7 +131,6 @@ import ChoixRadio from './ChoixRadio'
           </div> */}
         </div>
         <div>
-          
           {inputs.map((input)=> (
            inputType(input)
           ))}

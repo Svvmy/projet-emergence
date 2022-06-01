@@ -16,6 +16,9 @@
 	-moz-osx-font-smoothing: grayscale; */
 }
 
+.divPageFormExp{
+	margin-top: 10px;
+}
 
 .footer{
 	display: flex;

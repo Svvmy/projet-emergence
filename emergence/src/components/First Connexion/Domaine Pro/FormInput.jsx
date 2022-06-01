@@ -38,6 +38,16 @@ const FormInput = (props) => {
             <span>{errorMessage}</span>
       </div>
           )
+  }else if(spe=== "radio"){
+    return (
+      <div className='radio'>
+      <div className='formInput'>
+            <label className='lblForm'>{label}</label>
+            <input {...inputProps} onChange={onChange} onBlur={handleFocus} focused ={focused.toString()} disabled={bool} />
+            <span>{errorMessage}</span>
+      </div>
+      </div>
+            )  
   }else{
     return (
       <div className='formInput'>

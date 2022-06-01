@@ -1,32 +1,47 @@
-import React from 'react';
+import {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css'
+import logoEmergence from './logoEmergence.png'
+import AuthContext  from '../Auth/authProvider'
 
 
-function Navbar({value}){
-    if(value===true){
-        return(
-            <div>
-            <nav className='navdeconnect'>
-                <div className='navbar'></div>
-            </nav>
-            </div>
-        )}else{
-        
-        return (
-          <div>
-            {/* <nav className='navdeconnect'>
-                <div className='navbar'></div>
-            </nav> */}
-            <nav className='navConnect'>
-                <Link to="/">Accueil  </Link>
-                <Link to="/profil/:id">Profil</Link>
-                {/*<Link to="/project">Projet</Link>*/}
-                <Link to="/messagerie">Messagerie</Link>
-            </nav>
-          </div>    
+
+function Navbar(){
+
+const {setAuth, toogleConnect, authentication} = useContext(AuthContext);
+
+function disconnect(){
+    toogleConnect("disconnect")
+    setAuth({})
+    console.log("Deconnection")
+    console.log(authentication)
+  }
+
+
+// {/* <div className='linkNav'>  */}
+    return (
+        <>
+        <nav className='navConnect'>
+                {!authentication.connected && (
+                    <>
+                    <img className="logoEmergence" src={logoEmergence} alt="img"/>
+                    <Link className='link' to="/">Accueil</Link>
+                    <Link className='link' to="/profil/:id">Profil</Link>
+                    {/*<Link to="/project">Projet</Link>*/}
+                    <Link className='link' to="/messagerie">Messagerie</Link>
+                    </>
+                )}
+                {authentication.connected &&(
+                    <>
+                    <button onClick={() => disconnect()} className='btn btn-danger ms-2'>
+                        Log Out
+                    </button>
+                    </>
+                )}   
+        </nav>
+        </>
         )
     }
 
-}
+
 export default Navbar

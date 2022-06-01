@@ -1,24 +1,27 @@
-import React, {useState} from 'react'
+import React, {useContext} from 'react'
 import "./Authentification.css"
 import google from './logoGoogle.png'
 import apple from './apple.png'
 import mail from './logoMail.png'
+import AuthContext from './authProvider'
 //import Nav from ''
 
+//const UserContext = createContext()
 
 export default function Authentification() {
   
-  const [connect, setConnect] = useState(false)
+  // const [connected, setConnect] = useState(false)
+  const {toogleConnect} = useContext(AuthContext)
   
- 
 
-
-  const toggleConnect = () =>{
-      setConnect(!connect)
+  const Connect = () =>{
+      toogleConnect("connect")
   }
-  console.log(connect)
+  // console.log(connected)
   
   return (
+    
+
     <div className='divAuth'>
         <div className='div'>     
           <div className='divTitre'>
@@ -26,19 +29,9 @@ export default function Authentification() {
               <h2 className='text'>Faites émerger vos projets avec Emergence Design</h2>
           </div>
           <div className='divBtnList'>
-              {/*<button> 
-                <div className='divbtn'>
-                <div className='imgdiv'>
-                <img className='googleTest' src={google} alt="google" />  
-                </div>
-                <div className='text1div'>
-                S'inscrire avec Google
-                </div>
-                </div>
-              </button>*/}
               <button>
-                    <img className="imgClass" src={google} alt="img"/>
-                  S'inscrire avec Google 
+                <img className="imgClass" src={google} alt="img"/>
+                S'inscrire avec Google 
               </button>
               
               <button>
@@ -53,15 +46,18 @@ export default function Authentification() {
               
               <label className='text'id='label'> Vous avez déjà un compte ?</label>
               {/*<Nav>*/}
-              <button className='connect' onClick={toggleConnect}> Se connecter </button>
+              <button className='connect' onClick={Connect}> Se connecter </button>
               {/*</Nav>*/}
           </div>
         
         </div>
       
       </div>
+    
 
 
 
   )
 }
+
+

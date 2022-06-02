@@ -18,7 +18,9 @@ import InscriptionXD from './components/Button/InscriptionXD'
 export default function App() {
   return (
     <div className='App'>
-      <Navbar />
+      <div className='Navbar'>
+        <Navbar />
+      </div>
       <Routes>
         <Route path ="/" element ={<Authentification />} />
         <Route path ="/messagerie" element ={<Messagerie />} />

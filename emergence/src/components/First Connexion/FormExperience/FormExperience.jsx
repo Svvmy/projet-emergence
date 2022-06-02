@@ -60,7 +60,7 @@ export default function FormExperience() {
     {
       id: 4,
       name: "dateDebut",
-      type: "month",
+      type: "date",
       placeholder: "01/01/1950",
       label: "Date de début",
     },
@@ -74,7 +74,7 @@ export default function FormExperience() {
     {
       id: 6,
       name: "dateFin",
-      type: "text",
+      type: "date",
       placeholder: "01/01/1950",
       label: "Date de fin",
     },
@@ -114,7 +114,6 @@ export default function FormExperience() {
       )
     }else if(input.id === 6){
       return(
-        
         <Checkbox visible={check}>
           <FormInput
           key = {input.id}
@@ -125,7 +124,28 @@ export default function FormExperience() {
           />
         </Checkbox>
       )
-    } else {
+    }else if(input.id === 1){
+      return(
+          <FormInput
+          key = {input.id}
+          {...input}
+          value={values[input.name]}
+          onChange={onChange}
+          spe={"select"}
+          />
+        )
+    }else if(input.id === 9){
+      return(
+          <FormInput
+          key = {input.id}
+          {...input}
+          value={values[input.name]}
+          onChange={onChange}
+          spe={"textarea"}
+          />
+          )
+
+    }else{
       return(
         <FormInput
         key = {input.id}
@@ -134,9 +154,7 @@ export default function FormExperience() {
         onChange={onChange}
         />
       )
-    }
-  
-  
+    }  
   }
 
 
@@ -144,11 +162,11 @@ export default function FormExperience() {
     e.preventDefault();
     //console.log(value)
   }
-  const onChange2 = (e) => {
-    values.dateFin = ""
-    // setValues();
-    // toggle()
-  };
+  // const onChange2 = (e) => {
+  //   values.dateFin = ""
+  //   // setValues();
+  //   // toggle()
+  // };
 
   const onChange = (e) => {
     setValues({...values, [e.target.name]: e.target.value });
@@ -167,7 +185,7 @@ export default function FormExperience() {
 	// };
   
   console.log(values)
-  console.log(values.dateFin)
+  console.log("Date de fin: "+values.dateFin)
   return (
   <div className='divPageFormExp'>  
       <button className="button" id='btnRetour' type="submit" value={RetourPage} onClick="history.back()" onChange={(e) => setRetourPage(e.target.value)}>

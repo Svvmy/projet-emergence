@@ -16,6 +16,9 @@
 	-moz-osx-font-smoothing: grayscale; */
 }
 
+.divPageFormExp{
+	/* margin-top: 10px; */
+}
 
 .footer{
 	display: flex;
@@ -32,13 +35,15 @@
 #btnRetour{
 	margin-left: 10px;
 	width: 50px;
-	border-radius: 50px;
 	position: fixed;
+	clip-path:ellipse(50% 44%);
 }
 
 .btnRetourImg{
 	height: 30px;
 	width: 30px;
+	filter:invert(100%);
+	
 }
 
 .button{

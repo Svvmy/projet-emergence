@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.App{
+  display: flex;
+  flex-direction: column;
+}
+
+.Navbar{
+  height: 55px;
+}

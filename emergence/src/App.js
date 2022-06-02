@@ -11,12 +11,16 @@ import Messagerie from './components/Messagerie/Messagerie'
 import FCformExperience from './components/First Connexion/FormExperience/FormExperience'
 import FCformFormation from './components/First Connexion/FormFormation/FormFormation'
 import Authentification from './components/Auth/Authentification'
+import TestXD from './components/Button/testXD'
+import InscriptionXD from './components/Button/InscriptionXD'
 
 
 export default function App() {
   return (
     <div className='App'>
-      <Navbar />
+      <div className='Navbar'>
+        <Navbar />
+      </div>
       <Routes>
         <Route path ="/" element ={<Authentification />} />
         <Route path ="/messagerie" element ={<Messagerie />} />
@@ -28,6 +32,8 @@ export default function App() {
         <Route path ="/FC/domaine-pro" element = {<FCformdomainePro />}/>     
         <Route path ="/FC/ajout-formation" element = {<FCformFormation />}/>     
         <Route path ="/FC/ajout-experience" element = {<FCformExperience />}/>     
+        <Route path ="/FC/testxd" element = {<TestXD />}/>     
+        <Route path ="/FC/inscriptionxd" element = {<InscriptionXD />}/>     
       </Routes>
     </div>
   );

@@ -12,6 +12,7 @@ import FCformExperience from './components/First Connexion/FormExperience/FormEx
 import FCformFormation from './components/First Connexion/FormFormation/FormFormation'
 import Authentification from './components/Auth/Authentification'
 import ModuleSignIn from './components/Auth/SignIn/SignIn'
+import DescriptifProjet from './components/First Connexion/Descriptif_projet/DescriptifP'
 
 export default function App() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
         <Route path ="/FC/ajout-formation" element = {<FCformFormation />}/>     
         <Route path ="/FC/ajout-experience" element = {<FCformExperience />}/>     
         <Route path ="/FC/inscription" element = {<Inscription />}/>     
+        <Route path ="/FC/descriptif-projet" element = {<DescriptifProjet />}/>     
       </Routes>
     </div>
   );

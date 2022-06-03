@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import FormInput from '../Domaine Pro/FormInput';
-
+import '../Domaine Pro/form.css'
+import '../Domaine Pro/formInput.css'
 const Descriptif_projet = () => {
     
     const [values, setValues] = useState({

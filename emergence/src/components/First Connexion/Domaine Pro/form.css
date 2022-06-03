@@ -1,7 +1,3 @@
-/* .unCheck{
-color: grey;
-opacity: 50%;
-} */
 
 .radio{
     display: flex;
@@ -9,15 +5,15 @@ opacity: 50%;
 }
 
 
-.labelradio{
+.labelradio {
     margin: 0 15px;
 }
 
-#radio input{
+#radio input {
     margin: 0;
 }
 
-.divPageFormDomPro{
+.divPageFormDomPro {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,19 +21,19 @@ opacity: 50%;
 
 }
 
-.form{
-    margin:auto;
+.form {
+    margin: auto;
     width: 30%;
 }
 
 
-.etudiant{
+.etudiant {
     display: flex;
     flex-direction: column;
-   
+
 }
 
-#h2{
+#h2 {
     margin-top: 10px;
     margin-bottom: 10px;
     font-family: Montserrat;
@@ -46,20 +42,20 @@ opacity: 50%;
     /* text-align:center; */
 }
 
-#radio{
+#radio {
     font-family: Montserrat;
     font-weight: normal;
 }
 
-.divBtnSuivant{
+.divBtnSuivant {
     display: flex;
     margin: auto;
     width: 40%;
     height: 150px;
-   
+
 }
 
-.aBtnSuivant{
+.aBtnSuivant {
     margin: auto;
     background-color: aqua;
     width: 100%;
@@ -68,8 +64,8 @@ opacity: 50%;
 }
 
 
-#btnSuivant{
-    
+#btnSuivant {
+
     width: 100%;
     margin: auto;
     /* width: 50%;
@@ -86,13 +82,13 @@ opacity: 50%;
     margin-bottom: 30px; */
 }
 
-span{
+span {
     font-size: 12px;
     padding: 2px;
     color: red;
     display: none;
 }
 
-input:invalid[focused="true"] ~ span{
+input:invalid[focused="true"]~span {
     display: block;
 }

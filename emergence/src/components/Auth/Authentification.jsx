@@ -4,6 +4,7 @@ import google from './logoGoogle.png'
 import apple from './apple.png'
 import mail from './logoMail.png'
 import AuthContext from './authProvider'
+import ModuleSignIn from './SignIn/SignIn'
 //import Nav from ''
 
 //const UserContext = createContext()
@@ -27,7 +28,8 @@ export default function Authentification() {
           <div className='divTitre'>
               <h1 className='text'>Bienvenue !</h1>
               <h2 className='text'>Faites émerger vos projets avec Emergence Design</h2>
-          </div>
+          </div>          
+          {/* <ModuleSignIn/> */}
           <div className='divBtnList'>
               <button>
                 <img className="imgClass" src={google} alt="img"/>

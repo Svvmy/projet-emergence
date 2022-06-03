@@ -14,11 +14,14 @@ function Navbar(){
 
 const {setAuth, toogleConnect, authentication} = useContext(AuthContext);
 
+
+console.log(authentication)
+
 function disconnect(){
     toogleConnect("disconnect")
     setAuth({})
     console.log("Deconnection")
-    console.log(authentication)
+    // console.log(authentication)
   }
 
 
@@ -26,7 +29,7 @@ function disconnect(){
     return (
         <>
         <nav className='navConnect'>
-                {!authentication.connected && (
+                {authentication.connected && (
                     <>
                     <Link className='link' to ="/"><img className="logoEmergence" src={logoEmergence} alt="img"/></Link>
                     {/* <Link className='link' to="/">Accueil</Link> */}
@@ -37,13 +40,15 @@ function disconnect(){
                         <Link className='link' to="/messagerie/:id"><img className="navIconRight" src={msgLogo} alt="Messagerie"/></Link>
                         <Link className='link' to="/notification/:id"><img className="navIconRight" src={notifLogo} alt="Notification"/></Link>
                         <Link className='link' to="/profil/:id"><img className="navIconRight" src={profilLogo} alt="Profil"/></Link>
+
                     </div>
                     </>
                 )}
-                {authentication.connected &&(
+                {!authentication.connected &&(
                     <>
+                    <Link className='link' to ="/"><img className="logoEmergence" src={logoEmergence} alt="img"/></Link>
                     <button onClick={() => disconnect()} className='btnLogOut'>
-                        Log Out
+                        Connexion
                     </button>
                     </>
                 )}   

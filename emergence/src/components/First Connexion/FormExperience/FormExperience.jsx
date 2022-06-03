@@ -7,18 +7,7 @@ import imgRetour from './fleche retour.png';
 
 export default function FormExperience() {
 	const [ RetourPage, setRetourPage ] = useState('');
-  // //const [ ShowDateFin, setShowDateFin ] = useState(true);
-	// const [ NomEntreprise, setNomEntreprise ] = useState('');
-	// const [ Poste, setPoste ] = useState('');
-	// const [ Descriptif, setDescriptif ] = useState('');
-	// const [ Secteur, setSecteur ] = useState('');
-	// const [ Lieu, setLieu ] = useState('');
-	// const [ DateDebut, setDateDebut ] = useState('');
-	// //const [ OccupePoste, setOccupePoste ] = useState('');
-	// //const [ DateFin, setDateFin ] = useState('');
-	// const [ emplois, setEmplois ] = useState('Veuillez choisir');
-	// const [ value, setValue ] = useState('');
-	// const [ val, setValuePro ] = useState('');
+ 
 	const [ check, setCheck ] = useState(false);
   const [values, setValues] = useState({
     typeEmploi:"",
@@ -32,8 +21,6 @@ export default function FormExperience() {
     descriptif:"",
 
   });
-
-  // reset de la valeur reussi visuelement mais pas dans le tableau d'inputs 
 
   const inputs = [
     {
@@ -162,12 +149,7 @@ export default function FormExperience() {
     e.preventDefault();
     //console.log(value)
   }
-  // const onChange2 = (e) => {
-  //   values.dateFin = ""
-  //   // setValues();
-  //   // toggle()
-  // };
-
+ 
   const onChange = (e) => {
     setValues({...values, [e.target.name]: e.target.value });
   };
@@ -178,11 +160,6 @@ export default function FormExperience() {
     console.log(check);
 	};
 
-	// const handleSubmit = (e) => {
-	// 	e.preventDefault();
-	// 	console.log(value);
-	// 	console.log('activité pro:', val);
-	// };
   
   console.log(values)
   console.log("Date de fin: "+values.dateFin)
@@ -195,43 +172,14 @@ export default function FormExperience() {
 
       <h2>Ajouter une experience</h2>
       <form onSubmit={handleSubmit}>
-        {/* <label className='lbl'>Type d'emplois:</label>
-        <select value={emplois} onChange={(e) => setEmplois(e.target.value)}>
-          <option value="CDD">CDD</option>
-          <option value="CDI">CDI</option>
-          <option value="Stage">Stage</option>
-          <option value="Saisonier">Emplois saisonier</option>
-          <option value="Alternance">Alternance</option>
-        </select>
-        <br /> */}
-      
         <div className='inputs'>
           {inputs.map((input) => (
             inputType(input)
-            //   <FormInput
-            //   key = {input.id}
-            //   {...input}
-            //   value={values[input.name]}
-            //   onChange={onChange}
-            // />
           ))}
         </div>  
-
-
-        {/* <div>
-          <Checkbox visible={check}>
-            <input type="checkbox" onClick={toggle}/>
-            <label className='lbl'>
-              J'occupe actuellement ce poste:                               
-            </label>
-            <Input name="input text" visible={check} sv={setValue} />
-          </Checkbox>
-        </div> */}
-        
-
       </form>
     </div>
-    
+
     <div className='footer'>
       <button className="button" type="submit">
         Ajouter une experience

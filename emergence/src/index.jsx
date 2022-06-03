@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { AuthProvider } from '../src/components/Auth/authProvider';
 import './index.css';
 import App from './App';
+import { UserContextProvider } from './userContext';
 
 
 
@@ -12,7 +13,9 @@ import App from './App';
 ReactDOM.render( 
     <BrowserRouter>
     <AuthProvider>
-        <App />
+        <UserContextProvider>
+            <App />
+        </UserContextProvider>
     </AuthProvider>
     </BrowserRouter>,
 document.getElementById('root')

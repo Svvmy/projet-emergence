@@ -1,7 +1,7 @@
 import './App.css'
 import {Routes, Route} from "react-router-dom"
-//import Accueil from './components/Home/Accueil'
 import Profile from './components/Profile/Profile'
+import Inscription from './components/First Connexion/Inscription/inscription'
 import Navbar from './components/Navbar/Navbar'
 import Post from './components/Profile/Posts/Posts'
 import Experience from './components/Profile/Experiences/Experiences'
@@ -11,9 +11,7 @@ import Messagerie from './components/Messagerie/Messagerie'
 import FCformExperience from './components/First Connexion/FormExperience/FormExperience'
 import FCformFormation from './components/First Connexion/FormFormation/FormFormation'
 import Authentification from './components/Auth/Authentification'
-import TestXD from './components/Button/testXD'
-import InscriptionXD from './components/Button/InscriptionXD'
-
+import ModuleSignIn from './components/Auth/SignIn/SignIn'
 
 export default function App() {
   return (
@@ -21,6 +19,7 @@ export default function App() {
       <div className='Navbar'>
         <Navbar />
       </div>
+       {/* <ModuleSignIn />   */}
       <Routes>
         <Route path ="/" element ={<Authentification />} />
         <Route path ="/messagerie" element ={<Messagerie />} />
@@ -32,8 +31,7 @@ export default function App() {
         <Route path ="/FC/domaine-pro" element = {<FCformdomainePro />}/>     
         <Route path ="/FC/ajout-formation" element = {<FCformFormation />}/>     
         <Route path ="/FC/ajout-experience" element = {<FCformExperience />}/>     
-        <Route path ="/FC/testxd" element = {<TestXD />}/>     
-        <Route path ="/FC/inscriptionxd" element = {<InscriptionXD />}/>     
+        <Route path ="/FC/inscription" element = {<Inscription />}/>     
       </Routes>
     </div>
   );

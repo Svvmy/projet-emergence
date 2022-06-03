@@ -4,7 +4,7 @@ import google from './logoGoogle.png'
 import apple from './apple.png'
 import mail from './logoMail.png'
 import AuthContext from './authProvider'
-import ModuleSignIn from './SignIn/SignIn'
+// import ModuleSignIn from './SignIn/SignIn'
 //import Nav from ''
 
 //const UserContext = createContext()

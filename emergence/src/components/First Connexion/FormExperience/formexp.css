@@ -61,6 +61,10 @@
     margin-bottom: 10px;
 }
 
+.inscription{
+	width: 100px;
+}
+
 select > option{
 	font-family: Montserrat;
 }
@@ -148,6 +152,10 @@ select > option{
 	text-align: center;
 }
 
+.validation{
+	color: red;
+	font-family: Montserrat;
+}
 
 
 /* .formExp input,

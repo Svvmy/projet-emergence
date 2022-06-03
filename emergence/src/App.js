@@ -1,7 +1,7 @@
 import './App.css'
 import {Routes, Route} from "react-router-dom"
 import Profile from './components/Profile/Profile'
-import Inscription from './components/First Connexion/Inscription/inscription'
+import Inscription from './components/First Connexion/Inscription/Inscription'
 import Navbar from './components/Navbar/Navbar'
 import Post from './components/Profile/Posts/Posts'
 import Experience from './components/Profile/Experiences/Experiences'
@@ -11,8 +11,9 @@ import Messagerie from './components/Messagerie/Messagerie'
 import FCformExperience from './components/First Connexion/FormExperience/FormExperience'
 import FCformFormation from './components/First Connexion/FormFormation/FormFormation'
 import Authentification from './components/Auth/Authentification'
-import ModuleSignIn from './components/Auth/SignIn/SignIn'
+// import ModuleSignIn from './components/Auth/SignIn/SignIn'
 import DescriptifProjet from './components/First Connexion/Descriptif_projet/DescriptifP'
+import Login from './components/Login/Login'
 
 export default function App() {
   return (
@@ -33,7 +34,8 @@ export default function App() {
         <Route path ="/FC/ajout-formation" element = {<FCformFormation />}/>     
         <Route path ="/FC/ajout-experience" element = {<FCformExperience />}/>     
         <Route path ="/FC/inscription" element = {<Inscription />}/>     
-        <Route path ="/FC/descriptif-projet" element = {<DescriptifProjet />}/>     
+        <Route path ="/FC/descriptif-projet" element = {<DescriptifProjet />}/>    
+        <Route path ="/login" element = {<Login />}/>    
       </Routes>
     </div>
   );
